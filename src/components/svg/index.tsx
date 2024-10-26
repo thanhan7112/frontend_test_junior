@@ -1,13 +1,7 @@
 import { useDynamicSvgImport } from '@/hooks/useDynamicSvgImport';
+import { TypeSvgIcon } from '@/modal';
 
-interface IProps {
-  iconName: string;
-  className?: React.ComponentProps<'div'>['className'];
-  svgStyle?: React.SVGProps<SVGSVGElement>;
-  size?: string;
-}
-
-function SvgIcon(props: IProps) {
+function SvgIcon(props: TypeSvgIcon) {
   const { iconName, className, svgStyle } = props;
   const { SvgIcon } = useDynamicSvgImport(iconName);
   return (

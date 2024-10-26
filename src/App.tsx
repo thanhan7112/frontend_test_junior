@@ -1,4 +1,5 @@
 import SvgIcon from "@/components/svg"
+import { TierList } from "@/utils/constants"
 
 function App() {
 
@@ -28,168 +29,46 @@ function App() {
             </div>
           </div>
           <div className="flex gap-8">
-            {/* 1 */}
-            <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="size-8 bg-gray-gradient-1 rounded-full flex items-center justify-center">
-                <div className="relative size-[29px] rounded-full flex items-center justify-center inner-shadow bg-gray-gradient-2">
-                  <SvgIcon
-                    iconName="star"
-                    className="size-6 fill-[#F1F8FE]"
-                  />
-                  <div className="absolute size-4 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-gray-gradient-3 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white tracking-widest"> 1 </span>
+            {TierList.map((tier) => (
+              <div className="flex flex-col gap-2 items-center justify-center">
+                <div className={`size-8 relative rounded-full flex items-center justify-center ${tier.bg[0]}`}>
+                  {
+                    tier.spinIcon
+                    &&
+                    <SvgIcon
+                      iconName={tier.spinIcon.iconName}
+                      className={tier.spinIcon.className}
+                    />
+                  }
+                  {tier.twinkleIcons.map((twinkle) => (
+                    <SvgIcon
+                      iconName={twinkle.iconName}
+                      className={twinkle.className}
+                    />
+                  ))}
+                  <div className={`relative size-[29px] rounded-full flex items-center justify-center inner-shadow ${tier.bg[1]}`}>
+                    <div className="relative size-6 z-10">
+                      {tier.starIcons.map((star) => (
+                        <SvgIcon
+                          iconName={star.iconName}
+                          className={star.className}
+                        />
+                      ))}
+                    </div>
+                    {tier.leafIcons.map((leaf) => (
+                      <SvgIcon
+                      iconName={leaf.iconName}
+                      className={leaf.className}
+                    />
+                    ))}
+                    <div className={`absolute size-4 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center ${tier.bg[2]}`}>
+                      <span className="text-xs font-bold text-white tracking-wider"> {tier.tierNum} </span>
+                    </div>
                   </div>
                 </div>
+                <p className="text-xs text-neutral-fg-gray-1-rest">Tier {tier.tierNum}</p>
               </div>
-              <p className="text-xs text-neutral-fg-gray-1-rest">Tier 1</p>
-            </div>
-            {/* 2 */}
-            <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="size-8 bg-green-gradient-1 rounded-full flex items-center justify-center">
-                <div className="relative size-[29px] rounded-full flex items-center justify-center inner-shadow bg-green-gradient-2">
-                  <SvgIcon
-                    iconName="star"
-                    className="size-6 fill-[#F1F8FE]"
-                  />
-                  <div className="absolute size-4 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-green-gradient-3 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white tracking-wider"> 2 </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-neutral-fg-gray-1-rest">Tier 2</p>
-            </div>
-            {/* 3 */}
-            <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="size-8 bg-blue-gradient-1 rounded-full flex items-center justify-center">
-                <div className="relative size-[29px] rounded-full flex items-center justify-center inner-shadow bg-blue-gradient-2">
-                  <div className="relative size-6 z-10">
-                    <SvgIcon
-                      iconName="star-m"
-                      className="size-6 fill-[#F1F8FE]"
-                    />
-                    <SvgIcon
-                      iconName="star-m-inner"
-                      className="size-6 z-10 absolute top-0"
-                    />
-                  </div>
-                  <SvgIcon
-                    iconName="leaf"
-                    className="size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
-                  />
-                  <div className="absolute size-4 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-blue-gradient-3 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white tracking-wider"> 3 </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-neutral-fg-gray-1-rest">Tier 3</p>
-            </div>
-            {/* 4 */}
-            <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="size-8 bg-orange-gradient-1 rounded-full flex items-center justify-center">
-                <div className="relative size-[29px] rounded-full flex items-center justify-center inner-shadow bg-orange-gradient-2">
-                  <div className="relative size-6 z-10">
-                    <SvgIcon
-                      iconName="star-m"
-                      className="size-6 fill-[#F1F8FE]"
-                    />
-                    <SvgIcon
-                      iconName="star-m-inner"
-                      className="size-6 z-10 absolute top-0"
-                    />
-                  </div>
-                  <SvgIcon
-                    iconName="leaf"
-                    className="size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
-                  />
-                  <div className="absolute size-4 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-orange-gradient-3 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white tracking-wider"> 4 </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-neutral-fg-gray-1-rest">Tier 4</p>
-            </div>
-            {/* 5 */}
-            <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="size-8 bg-purple-gradient-1 relative rounded-full flex items-center justify-center">
-                <SvgIcon
-                  iconName="halo"
-                  className="size-12 z-0 absolute spin"
-                />
-                <div className="relative size-[29px] rounded-full flex items-center justify-center inner-shadow bg-purple-gradient-2">
-                  <div className="relative size-6 z-10">
-                    <SvgIcon
-                      iconName="star-m"
-                      className="size-6 fill-[#F1F8FE]"
-                    />
-                    <SvgIcon
-                      iconName="star-m-inner"
-                      className="size-6 z-10 absolute top-0"
-                    />
-                  </div>
-                  <SvgIcon
-                    iconName="leaf"
-                    className="size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
-                  />
-                  <SvgIcon
-                    iconName="leaf-2"
-                    className="size-6 z-[5] absolute top-2"
-                  />
-                  <div className="absolute size-4 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-purple-gradient-3 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white"> 5 </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-neutral-fg-gray-1-rest">Tier 5</p>
-            </div>
-            {/* 6 */}
-            <div className="flex flex-col gap-1 items-center justify-center">
-              <div className="size-8 bg-red-gradient-1 relative rounded-full flex items-center justify-center">
-                <SvgIcon
-                  iconName="halo"
-                  className="size-12 z-0 absolute spin"
-                />
-                <SvgIcon
-                  iconName="twinkle"
-                  className="size-2 z-20 pulse left-0 absolute top-0 -rotate-12"
-                />
-                <SvgIcon
-                  iconName="twinkle"
-                  className="size-2 z-20 pulse right-0 absolute top-0 rotate-12"
-                />
-                <SvgIcon
-                  iconName="twinkle"
-                  className="size-2 z-20 pulse left-0 absolute bottom-[-2px] rotate-45"
-                />
-                <SvgIcon
-                  iconName="twinkle"
-                  className="size-2 z-20 pulse right-0 absolute bottom-1 -rotate-12"
-                />
-                <div className="relative size-[29px] rounded-full flex items-center justify-center inner-shadow bg-red-gradient-2">
-                  <div className="relative size-6 z-10">
-                    <SvgIcon
-                      iconName="star-m"
-                      className="size-6 fill-[#F1F8FE]"
-                    />
-                    <SvgIcon
-                      iconName="star-m-inner"
-                      className="size-6 z-10 absolute top-0"
-                    />
-                  </div>
-                  <SvgIcon
-                    iconName="leaf"
-                    className="size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
-                  />
-                  <SvgIcon
-                    iconName="leaf-2"
-                    className="size-6 z-[5] absolute top-2"
-                  />
-                  <div className="absolute size-4 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-red-gradient-3 flex items-center justify-center">
-                    <span className="text-xs font-bold text-white tracking-wider"> 6 </span>
-                  </div>
-                </div>
-              </div>
-              <p className="text-xs text-neutral-fg-gray-1-rest">Tier 6</p>
-            </div>
+            ))}
           </div>
         </div>
       </section>
