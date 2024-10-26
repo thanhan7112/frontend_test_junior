@@ -1,32 +1,4 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-@layer utilities {
-  .scrollbar-xs::-webkit-scrollbar {
-    width: 4px;
-    height: 4px;
-  }
-  .scrollbar-xs::-webkit-scrollbar-thumb {
-    background-color: #8d8d8d;
-  }
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  /* Hide scrollbar for IE, Edge and Firefox */
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-}
-
 @font-face {
   font-family: "Nunito Sans";
   src: url("../assets/fonts/NunitoSans/NunitoSans-Regular.ttf");
-}
-
-body {
-  font-family: "Nunito Sans";
 }
