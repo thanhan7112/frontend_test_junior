@@ -19,7 +19,7 @@ function App() {
         className="bg-blue-gradient-opacity relative max-[620px]:flex flex-col md:gap-x-8 md:gap-y-4 gap-x-2 py-4 px-10 grid grid-rows-2 grid-flow-col border-b border-neutral-bd-1-rest">
         <div className="flex flex-col gap-3 md:mt-auto col-span-2 md:col-span-1 md:row-span-1 justify-center">
           <h3 className="text-white font-bold max-w-[425px] text-2xl">
-            Unlock Rewards with the Copin Referral Program dsss
+            Unlock Rewards with the Copin Referral Program
           </h3>
         </div>
         <div className="flex flex-col gap-1 h-full justify-center md:justify-start">
@@ -35,8 +35,8 @@ function App() {
             />
           </div>
         </div>
-        <div className="flex relative flex-col max-[620px]:mx-auto gap-2 ml-auto max-w-full mt-auto md:row-span-2 col-span-1">
-          <div className="relative">
+        <div className="flex relative flex-col max-[620px]:mx-auto ml-auto max-w-full mt-auto md:row-span-2 col-span-1">
+          <div className="relative size-fit">
             <img
               src={VectorDash}
               alt="Vector Dash"
@@ -51,7 +51,7 @@ function App() {
               />
             ))}
           </div>
-          <div className="w-full z-10 h-14">
+          <div className="w-full z-10 h-16">
             <div className="absolute bottom-0 w-full h-full">
               <div className="grid grid-cols-6 max-w-full h-full">
                 {TierList.map((tier) => (
@@ -69,7 +69,7 @@ function App() {
                             key={e}
                             src={e}
                             alt="glow"
-                            className="absolute bottom-0 object-contain min-w-fit max-h-full"
+                            className="absolute bottom-0 left-1/2 -translate-x-1/2 object-contain min-w-fit max-h-full"
                           />
                         ))}
                       </div>
@@ -87,7 +87,7 @@ function App() {
                         <img
                           src={Line}
                           alt="line"
-                          className="object-contain min-w-fit max-h-full"
+                          className="object-contain max-h-full absolute left-1/2 -translate-x-1/2"
                         />
                       </div>}
                       <div className={`md:size-8 size-6 rounded-full flex items-center relative z-50 justify-center ${tier.bg[0]}`}>
