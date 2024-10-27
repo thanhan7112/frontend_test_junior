@@ -12,7 +12,7 @@ export const TierList: TypeTier[] = [
             },
         ],
         twinkleIcons: [],
-        dot: 'bottom-[13%]',
+        dot: 'bottom-[18%]',
     },
     {
         bg: ['bg-green-gradient-1', 'bg-green-gradient-2', 'bg-green-gradient-3'],
@@ -25,7 +25,7 @@ export const TierList: TypeTier[] = [
             },
         ],
         twinkleIcons: [],
-        dot: 'bottom-[20%]',
+        dot: 'bottom-[24%]',
     },
     {
         bg: ['bg-blue-gradient-1', 'bg-blue-gradient-2', 'bg-blue-gradient-3'],
@@ -69,7 +69,7 @@ export const TierList: TypeTier[] = [
             },
         ],
         twinkleIcons: [],
-        dot: 'bottom-[43%]',
+        dot: 'bottom-[41%]',
     },
     {
         bg: ['bg-purple-gradient-1', 'bg-purple-gradient-2', 'bg-purple-gradient-3'],
@@ -99,7 +99,7 @@ export const TierList: TypeTier[] = [
             className: 'md:size-12 size-10 spin',
         },
         twinkleIcons: [],
-        dot: 'top-[36%]',
+        dot: 'top-[43%]',
     },
     {
         bg: ['bg-red-gradient-1', 'bg-red-gradient-2', 'bg-red-gradient-3'],
@@ -146,6 +146,6 @@ export const TierList: TypeTier[] = [
                 className: 'size-2 z-20 pulse right-1 absolute bottom-1 -rotate-12',
             },
         ],
-        dot: 'top-5',
+        dot: 'top-16',
     },
 ];

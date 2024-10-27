@@ -51,90 +51,88 @@ function App() {
               />
             ))}
           </div>
-          <div className="w-full z-10 h-16">
-            <div className="absolute bottom-0 w-full h-full">
-              <div className="grid grid-cols-6 max-w-full h-full">
-                {TierList.map((tier) => (
-                  <div className="h-full flex items-center flex-col relative" key={tier.tierNum}>
-                    {selectedInf === tier.tierNum
-                      &&
-                      <div className="flex absolute z-10 bottom-5 items-center justify-center h-full">
+          <div className="w-full h-fit">
+            <div className="grid grid-cols-6 max-w-full h-full">
+              {TierList.map((tier) => (
+                <div className="h-full flex items-center flex-col" key={tier.tierNum}>
+                  {selectedInf === tier.tierNum
+                    &&
+                    <div className="flex absolute z-10 bottom-6 items-center justify-center h-5/6">
+                      <img
+                        src={Glow3}
+                        alt="glow"
+                        className="object-contain min-w-fit max-h-full"
+                      />
+                      {[Glow1, Glow2].map((e) => (
                         <img
-                          src={Glow3}
+                          key={e}
+                          src={e}
                           alt="glow"
-                          className="object-contain min-w-fit max-h-full"
+                          className="absolute bottom-0 object-contain min-w-fit max-h-full"
                         />
-                        {[Glow1, Glow2].map((e) => (
-                          <img
-                            key={e}
-                            src={e}
-                            alt="glow"
-                            className="absolute bottom-0 object-contain min-w-fit max-h-full"
+                      ))}
+                    </div>
+                  }
+                  <div className="flex bottom-0 flex-col justify-end items-center h-full">
+                    {selectedInf === tier.tierNum && <div className="absolute h-full bottom-10 max-h-full z-40 flex-auto flex items-center flex-col justify-end ">
+                      <div className={`flex absolute ${tier.dot} ${tier.tierNum <= 4 ? 'flex-col-reverse' : 'flex-col'}`}>
+                        <div className={`size-[6px] border shadow-lg mx-auto border-neutral-fg-blue-4-rest rounded-full bg-white`}></div>
+                        <div className={`w-fit z-50 flex flex-col p-1 glass border-custom rounded border-gradient-border`}>
+                          <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F0 (Rebate): 5%</span>
+                          <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F1 (Commission): 35%</span>
+                          <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F2 (Commission): 10%</span>
+                        </div>
+                      </div>
+                      <img
+                        src={Line}
+                        alt="line"
+                        className="object-contain max-h-full"
+                      />
+                    </div>}
+                    <div className={`md:size-8 size-6 rounded-full flex items-center relative z-50 justify-center ${tier.bg[0]}`}>
+                      <div className="z-0 absolute opacity-75">
+                        {
+                          tier.spinIcon && (
+                            <SvgIcon
+                              iconName={tier.spinIcon.iconName}
+                              className={tier.spinIcon.className}
+                            />
+                          )
+                        }
+                        {tier.twinkleIcons.map((twinkle) => (
+                          <SvgIcon
+                            key={twinkle.className}
+                            iconName={twinkle.iconName}
+                            className={twinkle.className}
                           />
                         ))}
                       </div>
-                    }
-                    <div className="flex absolute bottom-0 flex-col justify-end items-center h-full">
-                      {selectedInf === tier.tierNum && <div className="w-full relative z-40 flex-auto flex items-center flex-col justify-end ">
-                        <div className={`flex absolute ${tier.dot} ${tier.tierNum <=4 ? 'flex-col-reverse' : 'flex-col'}`}>
-                          <div className={`size-[6px] border shadow-lg mx-auto border-neutral-fg-blue-4-rest rounded-full bg-white`}></div>
-                          <div className={`w-fit z-50 flex flex-col p-1 glass border-custom rounded border-gradient-border`}>
-                            <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F0 (Rebate): 5%</span>
-                            <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F1 (Commission): 35%</span>
-                            <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F2 (Commission): 10%</span>
-                          </div>
-                        </div>
-                        <img
-                          src={Line}
-                          alt="line"
-                          className="object-contain max-h-full"
-                        />
-                      </div>}
-                      <div className={`md:size-8 size-6 rounded-full flex items-center relative z-50 justify-center ${tier.bg[0]}`}>
-                        <div className="z-0 absolute opacity-75">
-                          {
-                            tier.spinIcon && (
-                              <SvgIcon
-                                iconName={tier.spinIcon.iconName}
-                                className={tier.spinIcon.className}
-                              />
-                            )
-                          }
-                          {tier.twinkleIcons.map((twinkle) => (
+                      <div className={`relative z-30 md:size-7 size-6 rounded-full cursor-pointer flex items-center justify-center inner-shadow ${tier.bg[1]}`} onClick={() => setSelectedInf(tier.tierNum)}>
+                        <div className="relative md:size-6 size-5 z-10">
+                          {tier.starIcons.map((star) => (
                             <SvgIcon
-                              key={twinkle.className}
-                              iconName={twinkle.iconName}
-                              className={twinkle.className}
+                              key={star.iconName}
+                              iconName={star.iconName}
+                              className={star.className}
                             />
                           ))}
                         </div>
-                        <div className={`relative z-30 md:size-7 size-6 rounded-full cursor-pointer flex items-center justify-center inner-shadow ${tier.bg[1]}`} onClick={() => setSelectedInf(tier.tierNum)}>
-                          <div className="relative md:size-6 size-5 z-10">
-                            {tier.starIcons.map((star) => (
-                              <SvgIcon
-                                key={star.iconName}
-                                iconName={star.iconName}
-                                className={star.className}
-                              />
-                            ))}
-                          </div>
-                          {tier.leafIcons.map((leaf) => (
-                            <SvgIcon
-                              key={leaf.iconName}
-                              iconName={leaf.iconName}
-                              className={leaf.className}
-                            />
-                          ))}
-                          <div className={`absolute md:size-4 size-3 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center ${tier.bg[2]}`}>
-                            <span className="md:text-xs text-tiny font-bold text-white md:tracking-wider"> {tier.tierNum} </span>
-                          </div>
+                        {tier.leafIcons.map((leaf) => (
+                          <SvgIcon
+                            key={leaf.iconName}
+                            iconName={leaf.iconName}
+                            className={leaf.className}
+                          />
+                        ))}
+                        <div className={`absolute md:size-4 size-3 z-20 rounded-full top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 flex items-center justify-center ${tier.bg[2]}`}>
+                          <span className="md:text-xs text-tiny font-bold text-white md:tracking-wider"> {tier.tierNum} </span>
                         </div>
                       </div>
-                      <p className="md:text-xs text-tiny text-neutral-fg-gray-1-rest mt-4">Tier {tier.tierNum}</p>
                     </div>
+                    <p className="md:text-xs text-tiny text-neutral-fg-gray-1-rest mt-4">Tier {tier.tierNum}</p>
                   </div>
-                ))}
-              </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
