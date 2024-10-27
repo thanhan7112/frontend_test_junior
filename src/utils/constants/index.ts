@@ -12,7 +12,7 @@ export const TierList: TypeTier[] = [
             },
         ],
         twinkleIcons: [],
-        dot: 'bottom-[15%]',
+        dot: 'bottom-[13%]',
     },
     {
         bg: ['bg-green-gradient-1', 'bg-green-gradient-2', 'bg-green-gradient-3'],
@@ -25,7 +25,7 @@ export const TierList: TypeTier[] = [
             },
         ],
         twinkleIcons: [],
-        dot: 'bottom-[22%]',
+        dot: 'bottom-[20%]',
     },
     {
         bg: ['bg-blue-gradient-1', 'bg-blue-gradient-2', 'bg-blue-gradient-3'],

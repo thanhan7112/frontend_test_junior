@@ -74,9 +74,9 @@ function App() {
                         ))}
                       </div>
                     }
-                    <div className="flex absolute bottom-0 flex-col justify-end items-center h-full w-fit">
-                      {selectedInf === tier.tierNum && <div className="w-full relative z-50 grow flex items-center flex-col justify-end h-full">
-                        <div className={`flex absolute ${tier.dot} size-fit ${tier.tierNum <=4 ? 'flex-col-reverse' : 'flex-col'}`}>
+                    <div className="flex absolute bottom-0 flex-col justify-end items-center h-full">
+                      {selectedInf === tier.tierNum && <div className="w-full relative z-40 flex-auto flex items-center flex-col justify-end ">
+                        <div className={`flex absolute ${tier.dot} ${tier.tierNum <=4 ? 'flex-col-reverse' : 'flex-col'}`}>
                           <div className={`size-[6px] border shadow-lg mx-auto border-neutral-fg-blue-4-rest rounded-full bg-white`}></div>
                           <div className={`w-fit z-50 flex flex-col p-1 glass border-custom rounded border-gradient-border`}>
                             <span className="text-[9.81px] text-neutral-fg-gray-1-rest whitespace-nowrap">F0 (Rebate): 5%</span>
@@ -90,7 +90,7 @@ function App() {
                           className="object-contain min-w-fit max-h-full"
                         />
                       </div>}
-                      <div className={`md:size-8 size-6 rounded-full flex items-center relative justify-center ${tier.bg[0]}`}>
+                      <div className={`md:size-8 size-6 rounded-full flex items-center relative z-50 justify-center ${tier.bg[0]}`}>
                         <div className="z-0 absolute opacity-75">
                           {
                             tier.spinIcon && (
