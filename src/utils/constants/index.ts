@@ -8,10 +8,11 @@ export const TierList: TypeTier[] = [
       starIcons: [
         {
           iconName: 'star',
-          className: 'size-6 fill-[#F1F8FE]'
+          className: 'md:size-6 size-5 fill-[#F1F8FE]'
         }
       ],
       twinkleIcons: [],
+      dot: 'bottom-[32.5%] left-[43%]'
     },
     {
       bg: ['bg-green-gradient-1', 'bg-green-gradient-2', 'bg-green-gradient-3'],
@@ -20,10 +21,11 @@ export const TierList: TypeTier[] = [
       starIcons: [
         {
           iconName: 'star',
-          className: 'size-6 fill-[#F1F8FE]'
+          className: 'md:size-6 size-5 fill-[#F1F8FE]'
         }
       ],
       twinkleIcons: [],
+      dot: 'bottom-[38%]'
     },
     {
       bg: ['bg-blue-gradient-1', 'bg-blue-gradient-2', 'bg-blue-gradient-3'],
@@ -31,20 +33,21 @@ export const TierList: TypeTier[] = [
       leafIcons: [
         {
           iconName: "leaf",
-          className: "size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
+          className: "md:size-6 size-5 z-0 absolute top-3 fill-[#b6b2b26b]"
         }
       ],
       starIcons: [
         {
           iconName: 'star',
-          className: 'size-6 fill-[#F1F8FE]'
+          className: 'md:size-6 size-5 fill-[#F1F8FE]'
         },
         {
           iconName: "star-m-inner",
-          className: "size-6 z-10 absolute top-0"
+          className: "md:size-6 size-5 z-10 absolute top-0"
         }
       ],
       twinkleIcons: [],
+      dot: 'bottom-[45%]'
     },
     {
       bg: ['bg-orange-gradient-1', 'bg-orange-gradient-2', 'bg-orange-gradient-3'],
@@ -52,20 +55,21 @@ export const TierList: TypeTier[] = [
       leafIcons: [
         {
           iconName: "leaf",
-          className: "size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
+          className: "md:size-6 size-5 z-0 absolute top-3 fill-[#b6b2b26b]"
         }
       ],
       starIcons: [
         {
           iconName: 'star',
-          className: 'size-6 fill-[#F1F8FE]'
+          className: 'md:size-6 size-5 fill-[#F1F8FE]'
         },
         {
           iconName: "star-m-inner",
-          className: "size-6 z-10 absolute top-0"
+          className: "md:size-6 size-5 z-10 absolute top-0"
         }
       ],
       twinkleIcons: [],
+      dot: 'top-[43%]'
     },
     {
       bg: ['bg-purple-gradient-1', 'bg-purple-gradient-2', 'bg-purple-gradient-3'],
@@ -73,28 +77,29 @@ export const TierList: TypeTier[] = [
       leafIcons: [
         {
           iconName: "leaf",
-          className: "size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
+          className: "md:size-6 size-5 z-0 absolute top-3 fill-[#b6b2b26b]"
         },
         {
           iconName: "leaf-2",
-          className: "size-6 z-[5] absolute top-2"
+          className: "md:size-6 size-5 z-[5] absolute top-2"
         }
       ],
       starIcons: [
         {
           iconName: 'star',
-          className: 'size-6 fill-[#F1F8FE]'
+          className: 'md:size-6 size-5 fill-[#F1F8FE]'
         },
         {
           iconName: "star-m-inner",
-          className: "size-6 z-10 absolute top-0"
+          className: "md:size-6 size-5 z-10 absolute top-0"
         }
       ],
       spinIcon: {
         iconName: "halo",
-        className: "size-12 z-0 absolute spin"
+        className: "md:size-12 size-10 spin"
       },
       twinkleIcons: [],
+      dot: 'top-[30%]'
     },
     {
       bg: ['bg-red-gradient-1', 'bg-red-gradient-2', 'bg-red-gradient-3'],
@@ -102,26 +107,26 @@ export const TierList: TypeTier[] = [
       leafIcons: [
         {
           iconName: "leaf",
-          className: "size-6 z-0 absolute top-3 fill-[#b6b2b26b]"
+          className: "md:size-6 size-5 z-0 absolute top-3 fill-[#b6b2b26b]"
         },
         {
           iconName: "leaf-2",
-          className: "size-6 z-[5] absolute top-2"
+          className: "md:size-6 size-5 z-[5] absolute top-2"
         }
       ],
       starIcons: [
         {
           iconName: 'star',
-          className: 'size-6 fill-[#F1F8FE]'
+          className: 'md:size-6 size-5 fill-[#F1F8FE]'
         },
         {
           iconName: "star-m-inner",
-          className: "size-6 z-10 absolute top-0"
+          className: "md:size-6 size-5 z-10 absolute top-0"
         }
       ],
       spinIcon: {
         iconName: "halo",
-        className: "size-12 z-0 absolute spin"
+        className: "md:size-12 size-10 spin"
       },
       twinkleIcons: [
         {
@@ -141,5 +146,6 @@ export const TierList: TypeTier[] = [
           className: "size-2 z-20 pulse right-0 absolute bottom-1 -rotate-12"
         }
       ],
+      dot: 'top-[12%] right-[43%]'
     }
   ]
