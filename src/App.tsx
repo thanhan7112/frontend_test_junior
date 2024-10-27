@@ -199,7 +199,7 @@ function App() {
                     </div>
                 </div>
             </section>
-            <section className="p-4 grow">
+            <section className="px-4 pb-4 grow">
                 <div className="bg-[#101423] h-full flex items-center flex-col justify-center p-4 gap-1">
                     <h3 className="text-base font-bold text-center text-white">
                         Apply <span className="bg-neutral-gradient-1 bg-clip-text inline-block text-transparent">Copin Affilate Program </span> to get
