@@ -69,7 +69,7 @@ function App() {
                             key={e}
                             src={e}
                             alt="glow"
-                            className="absolute bottom-0 left-1/2 -translate-x-1/2 object-contain min-w-fit max-h-full"
+                            className="absolute bottom-0 object-contain min-w-fit max-h-full"
                           />
                         ))}
                       </div>
@@ -87,7 +87,7 @@ function App() {
                         <img
                           src={Line}
                           alt="line"
-                          className="object-contain max-h-full absolute left-1/2 -translate-x-1/2"
+                          className="object-contain max-h-full"
                         />
                       </div>}
                       <div className={`md:size-8 size-6 rounded-full flex items-center relative z-50 justify-center ${tier.bg[0]}`}>
