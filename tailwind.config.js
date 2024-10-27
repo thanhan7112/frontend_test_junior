@@ -10,10 +10,18 @@ export default {
         "neutral-fg-blue-3-rest": "#97CFFD",
         "neutral-fg-blue-4-rest": "#4EAEFD",
         "neutral-fg-gray-1-rest": "#FCFCFD",
-        "neutral-bd-1-rest": "#313856"
+        "neutral-bd-1-rest": "#313856",
+        "gradient-border": "linear-gradient(179.03deg, rgba(255, 255, 255, 0.8) 0.83%, rgba(207, 207, 207, 0) 47.54%, rgba(255, 255, 255, 0.8) 99.17%)",
+      },
+      fontSize: {
+        "normal": "13px",
+        "tiny": "10px",
+      },
+      borderWidth: {
+        "custom": "0.69px",
       },
       backgroundImage: {
-        "blue-gradient-opacity": 'linear-gradient(90deg, rgba(62, 162, 244, 0) 13.07%, rgba(66, 62, 244, 0.1) 103.18%)',
+        "blue-gradient-opacity": "linear-gradient(90deg, rgba(62, 162, 244, 0) 13.07%, rgba(66, 62, 244, 0.1) 103.18%)",
         "gray-gradient-1": "linear-gradient(180deg, #777E90 6%, #FBFBFB 100%)",
         "gray-gradient-2": "linear-gradient(180deg, #8D98C6 6%, #B3BEDC 100%)",
         "gray-gradient-3": "linear-gradient(180deg, #707698 6%, #C7D2E8 100%)",
@@ -38,5 +46,14 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".border-gradient": {
+          borderImageSource: "linear-gradient(179.03deg, rgba(255, 255, 255, 0.8) 0.83%, rgba(207, 207, 207, 0) 47.54%, rgba(255, 255, 255, 0.8) 99.17%)",
+          borderImageSlice: 1,
+        },
+      });
+    },
+  ],
 };

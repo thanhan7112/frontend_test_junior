@@ -11,5 +11,5 @@ export type TypeTier = {
     starIcons: TypeSvgIcon[]
     leafIcons: TypeSvgIcon[]
     tierNum: number
-    dot: string
+    // dot: string
 }
