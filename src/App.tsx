@@ -19,7 +19,7 @@ function App() {
         className="bg-blue-gradient-opacity relative max-[620px]:flex flex-col md:gap-x-8 md:gap-y-4 gap-x-2 py-4 px-10 grid grid-rows-2 grid-flow-col border-b border-neutral-bd-1-rest">
         <div className="flex flex-col gap-3 md:mt-auto col-span-2 md:col-span-1 md:row-span-1 justify-center">
           <h3 className="text-white font-bold max-w-[425px] text-2xl">
-            Unlock Rewards with the Copin Referral Program
+            Unlock Rewards with the Copin Referral Program dsss
           </h3>
         </div>
         <div className="flex flex-col gap-1 h-full justify-center md:justify-start">
